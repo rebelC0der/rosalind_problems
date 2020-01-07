@@ -22,8 +22,8 @@ print(
 
 
 # ===== Conditions and Loops =====
-startPos = 4309
-endPos = 8902
+startPos = 100
+endPos = 200
 result = 0
 
 for x in range(startPos, endPos + 1):
