@@ -5,21 +5,22 @@ def Fibonacci_Loop_Pythonic(months, offsprings):
     return child
 
 
-"""
-o - small (children) rabbits. Can reproduce in a next cycle only.
-0 - mature (parrents) rabbits. Can reproduce and move to a nex cycle.
+# print(Fibonacci_Loop_Pythonic(6, 2))
 
-5 Months, 3 Offsprings per month:
+"""
+o - small (children) rabbits. They have to mature and reproduce in the next cycle only.
+0 - mature (parents) rabbits. They can reproduce and move to the next cycle.
 
 Month 1: [o]
 Month 2: [0]
-Month 3: [0 o o o]
-Month 4: [0 o o o 0 0 0]
-Month 5: [0 o o o 0 0 0 0 o o o 0 o o o 0 o o o]
-Month 6: [0 o o o 0 0 0 0 o o o 0 o o o 0 o o o 0 o o o 0 0 0 0 o o o 0 0 0 0 o o o 0 0 0]
+Month 3: [0 o o]
+Month 4: [0 o o 0 0]
+Month 5: [0 o o 0 0 0 o o 0 o o]
+Month 6: [0 o o 0 0 0 o o 0 o o 0 o o 0 0 0 o o 0 0]
 """
 
 
+# Rabbits with a recursion
 def Wascally_Wabbits(month, offspringCount):
     if month == 1:
         return 1
@@ -36,5 +37,6 @@ def Wascally_Wabbits(month, offspringCount):
     return (oneGen + (twoGen * offspringCount))
 
 
+# TESTS
 print(Fibonacci_Loop_Pythonic(35, 5))
 print(Wascally_Wabbits(35, 5))
